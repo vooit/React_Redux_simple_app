@@ -4,6 +4,7 @@
 import React, {Component} from "react";
 import {connect} from 'react-redux';
 import {selectBook} from '../actions/index';
+
 //sends action from actionCreator to all the reducers
 import {bindActionCreators} from 'redux';
 
@@ -12,7 +13,7 @@ class Booklist extends React.Component {
         return this.props.books.map((book) => {
             return (
                 <li className="list-group-item"
-                    onClick={()=>this.props.selectBook(book)}
+                    onClick={() => this.props.selectBook(book)}
                     key={book.title}>{book.title}</li>
             )
         })
